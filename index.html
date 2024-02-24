@@ -56,16 +56,17 @@
                         </div>
                         <div class="contact-list">
 
-                            <div class="contact-chat test">
-                                <img src="./img/avatar_1.jpg" alt="">
+                            <div v-for="contact in contacts" class="contact-chat test">
+                                <img :src="contact.avatar" alt="">
                                 <div class="contact-preview">
-                                    <div class="contact-name">Blur</div>
+                                    <div class="contact-name">{{contact.name}}</div>
                                     <div class="last-mex">
                                         <div class="mex-text">Siuuuuuum</div>
                                         <div class="mex-time">12:00</div>
                                     </div>
                                 </div>
                             </div>
+                            
                             
                         </div>
                     </div>
