@@ -2,8 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
+/* Classe di test */
 .test{
     border: 1px solid black;
 }
@@ -47,7 +49,6 @@
     max-width: 1600px;
     width: 1400px;
     height: 100%;
-    background-color: white;
     margin: 0 auto;
     border-radius: 0.2em;
 }
@@ -56,6 +57,56 @@
     width: 35%;
     height: 100%;
 }
+
+aside #aside-top{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    height: 80px;
+    align-items: center;
+    background-color: #EAEAEA;
+}
+
+#aside-top #user-profile{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 5px;
+}
+
+#user-profile img{
+    height: 100%;
+    border-radius: 50%;
+}
+
+#aside-top #user-buttons{
+    display: flex;
+    gap: 18px;
+    padding-right: 15px;
+}
+
+
+#aside-bottom #notification{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 20px;
+    height: 85px;
+    background-color: #8EDAFC;
+}
+
+#notification .fa-solid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    padding: 6px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+
 
 #user-interface main{
     width: 65%;
