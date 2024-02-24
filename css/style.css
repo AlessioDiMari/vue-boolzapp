@@ -209,14 +209,17 @@ main .contact{
     padding-right: 26px;
 }
 
-i, button{
+button{
+    background-color: transparent;
+    border: none;
     color: gray;
     cursor: pointer;
 }
 
 main .chat{
-    height: calc(100% - 80px);
+    height: calc(100% - 80px - 80px);
     background-image: url("../img/mine.jpg");
+    overflow-y: scroll;
 }
 
 .chat-container{
@@ -253,3 +256,24 @@ main .chat{
     color: grey;
 }
 
+.message-sender{
+    display: flex;
+    padding: 10px 0px;
+    height: 80px;
+}
+
+.message-sender > *{
+    height: 100%;
+}
+
+.message-sender button{
+    padding: 0 38px;
+    font-size: 1.7em;
+}
+
+.message-sender input{
+    flex-grow: 1;
+    padding: 16px;
+    border: none;
+    border-radius: 0.5em;
+}
