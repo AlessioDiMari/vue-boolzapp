@@ -218,3 +218,38 @@ main .chat{
     height: calc(100% - 80px);
     background-image: url("../img/mine.jpg");
 }
+
+.chat-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 56px 0;
+}
+
+.chat-container .message{
+    position: relative;
+    padding: 16px 20px;
+    max-width: 75%;
+    background-color: white;
+    border-radius: 0.4em;
+}
+
+.message.sent{
+    align-self: flex-end;
+    background-color: #D5F9BA;
+}
+
+.message.received{
+    align-self: flex-start;
+}
+
+.message .time{
+    position: absolute;
+    right: 5px;
+    bottom: 6px;
+    font-size: 0.6em;
+    color: grey;
+}
+
