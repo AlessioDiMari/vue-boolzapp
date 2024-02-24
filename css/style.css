@@ -80,6 +80,10 @@ aside #aside-top{
     border-radius: 50%;
 }
 
+#user-profile strong{
+    cursor: pointer;
+}
+
 #aside-top #user-buttons{
     display: flex;
     gap: 18px;
@@ -153,8 +157,10 @@ aside #aside-bottom{
     flex-grow: 1;
 }
 
-.contact-preview .contact-name{
+.contact-name{
     font-size: 1.2em;
+    cursor: pointer;
+
 }
 
 .contact-preview .last-mex{
@@ -165,9 +171,50 @@ aside #aside-bottom{
 }
 
 
-
 #user-interface main{
     width: 65%;
     height: 100%;
-    background-color: #FAFAFA;
+}
+
+main .contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: #EAEAEA;
+}
+
+.contact .contact-profile{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    height: 100%;
+    padding: 10px 20px;
+}
+
+.contact-profile img{
+    height: 100%;
+    border-radius: 50%;
+}
+
+.contact-info .contact-status{
+    color: grey;
+    font-size: 0.9em;
+}
+
+.contact .contact-buttons{
+    display: flex;
+    gap: 18px;
+    padding-right: 26px;
+}
+
+i, button{
+    color: gray;
+    cursor: pointer;
+}
+
+main .chat{
+    height: calc(100% - 80px);
+    background-image: url("../img/mine.jpg");
 }
