@@ -133,6 +133,37 @@ aside #aside-bottom{
 }
 
 
+.contact-list .contact-chat{
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    gap: 20px;
+    height: 84px;
+    padding: 10px 20px;
+}
+
+.contact-chat img{
+    height: 100%;
+    border-radius: 50%;
+}
+
+.contact-chat .contact-preview{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.contact-preview .contact-name{
+    font-size: 1.2em;
+}
+
+.contact-preview .last-mex{
+    display: flex;
+    justify-content: space-between;
+    color: grey;
+    font-size: 0.9em;
+}
+
 
 
 #user-interface main{
