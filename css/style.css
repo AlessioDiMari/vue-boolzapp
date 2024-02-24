@@ -56,6 +56,7 @@
 #user-interface aside{
     width: 35%;
     height: 100%;
+    background-color: white;
 }
 
 aside #aside-top{
@@ -86,6 +87,10 @@ aside #aside-top{
 }
 
 
+aside #aside-bottom{
+    background-color: white;
+}
+
 #aside-bottom #notification{
     display: flex;
     align-items: center;
@@ -102,13 +107,36 @@ aside #aside-top{
     width: 50px;
     height: 50px;
     padding: 6px;
+    color: #8EDAFC;
     background-color: white;
     border-radius: 50%;
 }
+
+.description-notification a{
+    color: gray;
+}
+
+
+#aside-bottom #profile-search{
+    display: flex;
+    height: 52px;
+    padding: 8px;
+}
+
+#profile-search button{
+    padding: 10px 26px;
+}
+
+#profile-search input{
+    flex-grow: 1;
+    padding-left: 10px;
+}
+
 
 
 
 #user-interface main{
     width: 65%;
     height: 100%;
+    background-color: #FAFAFA;
 }
