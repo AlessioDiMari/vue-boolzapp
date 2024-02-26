@@ -146,6 +146,7 @@ aside #aside-bottom{
     gap: 20px;
     height: 84px;
     padding: 10px 20px;
+    cursor: pointer;
 }
 
 .contact-chat img{
@@ -161,8 +162,6 @@ aside #aside-bottom{
 
 .contact-name{
     font-size: 1.2em;
-    cursor: pointer;
-
 }
 
 .contact-preview .last-mex{

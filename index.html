@@ -56,7 +56,10 @@
                         </div>
                         <div class="contact-list">
 
-                            <div v-for="contact in contacts" class="contact-chat test">
+                            <div v-for="(contact, index) in contacts" 
+                            class="contact-chat test"
+                            @click="swapActiveChat(index)"
+                            >
                                 <img :src="contact.avatar" alt="">
                                 <div class="contact-preview">
                                     <div class="contact-name">{{contact.name}}</div>

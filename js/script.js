@@ -171,5 +171,12 @@ createApp({
             activeChatIndex: 0,
 
         }
+    },
+
+    methods: {
+        swapActiveChat(index) {
+            console.log(index);
+            this.activeChatIndex = index;
+        },
     }
 }).mount("#app")
