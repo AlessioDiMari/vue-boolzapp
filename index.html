@@ -94,29 +94,25 @@
                             </button>
                         </div>
                     </div>
-                    <div class="chat">
-                        <div class="chat-container">
-                            <div class="message sent">
-                                <div class="message-text">
-                                    Hai postato a spasso il cane?
-                                </div>
-                                <div class="time">12:00</div>
-                            </div>
-                            <div class="message sent">
-                                <div class="message-text">
-                                    Ricordati di stendere i panni
-                                </div>
-                                <div class="time">12:00</div>
-                            </div>
-                            <div class="message received">
-                                <div class="message-text">
-                                    Tutto fatto!
-                                </div>
-                                <div class="time">12:00</div>
-                            </div>
-                            
-                        </div>
+                    <div id="chat-container">
 
+                        <div class="chat">
+
+                            <div class="chat-container">
+                                
+                                <div v-for="actualMessage in contacts[activeChatIndex].messages" 
+                                class="message"
+                                :class="actualMessage.status"
+                                >
+                                    <div class="message-text">
+                                        {{actualMessage.message}}
+                                    </div>
+                                    <div class="time">{{actualMessage.date}}</div>
+                                </div>                        
+                                
+                            </div>
+    
+                        </div>
                     </div>
 
                     <div class="message-sender">
