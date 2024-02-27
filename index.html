@@ -13,16 +13,20 @@
 </head>
 <body>
     <div id="app" class="container">
+
+        <!-- SFONDO -->
         <div id="background-top" ></div>
     
-    
+        <!-- INTERFACCIA UTENTE -->
         <div id="ui-container">
             <div id="user-interface" class="test">
 
+                <!--  ASIDE  -->
                 <aside >
 
                     <div id="aside-top">
 
+                        <!-- PROFILO UTENTE -->
                         <div id="user-profile">
                             <img src="./img/avatar_io.jpg" alt="user image">
                             <strong id="user-name">Lessia McQ</strong>
@@ -38,9 +42,12 @@
                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                             </button>
                         </div>
+                        <!-- FINE PROFILO UTENTE -->
 
                     </div>
                     <div id="aside-bottom">
+
+                        <!-- SEZIONE NOTIFICA DESKTOP -->
                         <div id="notification">
                             <i class="fa-solid fa-bell-slash"></i>
                             <div class="description-notification">
@@ -48,6 +55,9 @@
                                 <a href="#">Attiva notifiche desktop</a>
                             </div>
                         </div>
+                        <!-- FINE SEZIONE NOTIFICA DESKTOP -->
+
+                        <!-- SEZIONE RICERCA -->
                         <div id="profile-search">
                             <button>
                                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -57,8 +67,12 @@
                             v-model="searchQuery"
                             >
                         </div>
+                        <!-- FINE SEZIONE RICERCA -->
+
+                        <!-- LISTA CONTATTI -->
                         <div class="contact-list">
 
+                            <!-- CONTATTO -->
                             <div v-for="(contact, index) in filteredContacts" 
                             class="contact-chat "
                             :class="index == activeChatIndex ? 'open' : ''"
@@ -73,14 +87,19 @@
                                     </div>
                                 </div>
                             </div>
-                            
-                            
+                            <!-- FINE CONTATTO -->
+                                                        
                         </div>
+                        <!-- FINE LISTA CONTATTI -->
                     </div>
 
                 </aside>
+                <!--  FINE ASIDE  -->
 
+                <!-- MAIN -->
                 <main >
+
+                    <!-- PROFILO CONTATTO -->
                     <div class="contact">
                         <div class="contact-profile">
                             <img :src="activeContactAvatar" alt="">
@@ -101,12 +120,16 @@
                             </button>
                         </div>
                     </div>
+                    <!-- FINE PROFILO CONTATTO -->
+
+                    <!-- CHAT -->
                     <div id="chat-container">
 
                         <div class="chat">
 
                             <div class="chat-container">
                                 
+                                <!-- MESSAGGIO -->
                                 <div v-for="actualMessage in contacts[activeChatIndex].messages" 
                                 class="message"
                                 :class="actualMessage.status"
@@ -115,13 +138,16 @@
                                         {{actualMessage.message}}
                                     </div>
                                     <div class="time">{{actualMessage.date}}</div>
-                                </div>                        
+                                </div>
+                                <!-- FINE MESSAGGIO -->
                                 
                             </div>
     
                         </div>
                     </div>
+                    <!-- FINE CHAT -->
 
+                    <!-- MESSAGE SENDER -->
                     <div class="message-sender">
                         <button>
                             <i class="fa-regular fa-face-smile"></i>
@@ -134,14 +160,18 @@
                             <i class="fa-solid fa-microphone"></i>
                         </button>
                     </div>
+                    <!-- FINE MESSAGE SENDER -->
 
                 </main>
+                <!-- FINE MAIN -->
 
             </div>
         </div>
+        <!-- FINE INTERFACCIA UTENTE -->
     
     
         <div id="background-bottom" ></div>
+        <!-- FINE SFONDO -->
     </div>
 
 

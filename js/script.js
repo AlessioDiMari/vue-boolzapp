@@ -176,6 +176,12 @@ createApp({
             
             // Creo una stringa vuota che servirà per memodizzare la ricerca
             searchQuery: "",
+
+
+            // *Bonus pulsante elimina*
+            // Mi assicuro che questa variabile sia accessibile per tutto il codice
+            // e gli do un valore nullo che cambierò in seguito
+            activeContextMenuMessage: null,
         }
     },
 
@@ -192,7 +198,8 @@ createApp({
     },
 
     methods: {
-
+        
+        // Funzione per cambiare chat al click sul contatto
         swapActiveChat(index) {
             // Modifico la funzione
             this.contacts.forEach((contact, i) => {
@@ -206,6 +213,7 @@ createApp({
             this.activeContactAvatar = this.contacts[index].avatar;
             // dopodichè aggiorno l'html
         },
+
         // Creo una funzione che faccia vedere in pagina un testo scritto
         // nell'input text-sender alla pressione del tasto enter
         sendMessage(){
@@ -247,7 +255,7 @@ createApp({
                     // collegati al contatto
                     this.contacts[this.activeChatIndex].messages.push({
                         date: formattedDate,
-                        message: 'Deh, PEFFOOOOOORZA!!!!!',
+                        message: 'Deh, PEFFFFOOOOOOOORZA!!!!!',
                         status: 'received'
                     });
 
@@ -255,7 +263,9 @@ createApp({
 
             }
             
-        }      
+        },
+
+        
         
     }
 }).mount("#app")
