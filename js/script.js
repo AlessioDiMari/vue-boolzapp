@@ -169,8 +169,22 @@ createApp({
             ],
 
             activeChatIndex: 0,
-
+            
+            // Creo una stringa vuota che servirà per memodizzare la ricerca
+            searchQuery: "",
         }
+    },
+
+    computed: {
+        // Creo una funzione di ricerca
+        filteredContacts() {
+          // Filtra i contatti in base alla query di ricerca
+          return this.contacts.filter(contact =>
+            // Utilizzo il metodo toLowerCase per far si che la ricerca sia più flessibile
+            contact.name.toLowerCase().includes(this.searchQuery.toLowerCase())
+          );
+        //   Modifico il codice html per adattarlo alla funzione di ricerca
+        },
     },
 
     methods: {

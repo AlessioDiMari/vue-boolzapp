@@ -52,11 +52,14 @@
                             <button>
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
-                            <input type="search" placeholder="Cerca o inizia una nuova chat">
+                            <input type="search" 
+                            placeholder="Cerca o inizia una nuova chat" 
+                            v-model="searchQuery"
+                            >
                         </div>
                         <div class="contact-list">
 
-                            <div v-for="(contact, index) in contacts" 
+                            <div v-for="(contact, index) in filteredContacts" 
                             class="contact-chat test"
                             :class="index == activeChatIndex ? 'open' : ''"
                             @click="swapActiveChat(index)"
