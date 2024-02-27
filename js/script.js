@@ -211,6 +211,24 @@ createApp({
                 // l'utente non debba eliminare il messaggio
                 // inviato dall'input manualmente
                 messageInput.value = '';
+
+                // Faccio in modo che dopo 1.5 secondi dall'invio
+                // del messaggio il contatto "risponda"
+                setTimeout(() => {
+                    // Dichiaro la data e l'orario del messaggio di risposta
+                    const now = new Date();
+                    const formattedDate = `${now.getHours()}:${now.getMinutes()}`;
+
+                    // Aggiungo il nuovo messaggio all'array dei messaggi
+                    // collegati al contatto
+                    this.contacts[this.activeChatIndex].messages.push({
+                        date: formattedDate,
+                        message: 'Deh, PEFFOOOOOORZA!!!!!',
+                        status: 'received'
+                    });
+
+                }, 1500);
+
             }
             
         }      
