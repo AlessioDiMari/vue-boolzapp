@@ -174,9 +174,27 @@ createApp({
     },
 
     methods: {
+
         swapActiveChat(index) {
-            console.log(index);
+            // Modifico la funzione
+            this.contacts.forEach((contact, i) => {
+                contact.open = i ===index;
+            });
             this.activeChatIndex = index;
         },
+        // Creo una funzione che faccia vedere in pagina un testo scritto
+        // nell'input text-sender
+        sendMessage(){
+            // Prendo il testo inserito nell'input text-sender
+            const messageInput = document.getElementById("text-sender");
+
+            // Prendo il valore all'interno dell'input
+            // e utilizzo ilò metodo trim per eliminare gli spazi
+            // all'inizio e alla fine del valore
+            const messageText = messageInput.value.trim();
+
+            
+        }
+        
     }
 }).mount("#app")

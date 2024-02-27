@@ -149,6 +149,11 @@ aside #aside-bottom{
     cursor: pointer;
 }
 
+.contact-chat.open{
+    background-color: #E9EBEB;
+}
+
+
 .contact-chat img{
     height: 100%;
     border-radius: 50%;

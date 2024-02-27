@@ -58,6 +58,7 @@
 
                             <div v-for="(contact, index) in contacts" 
                             class="contact-chat test"
+                            :class="index == activeChatIndex ? 'open' : ''"
                             @click="swapActiveChat(index)"
                             >
                                 <img :src="contact.avatar" alt="">
@@ -122,7 +123,7 @@
                         <button>
                             <i class="fa-regular fa-face-smile"></i>
                         </button>
-                        <input type="text" placeholder="Scrivi un messaggio">
+                        <input id="text-sender" type="text" placeholder="Scrivi un messaggio">
                         <button>
                             <i class="fa-solid fa-microphone"></i>
                         </button>
