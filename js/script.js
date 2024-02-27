@@ -183,7 +183,7 @@ createApp({
             this.activeChatIndex = index;
         },
         // Creo una funzione che faccia vedere in pagina un testo scritto
-        // nell'input text-sender
+        // nell'input text-sender alla pressione del tasto enter
         sendMessage(){
             // Prendo il testo inserito nell'input text-sender
             const messageInput = document.getElementById("text-sender");
