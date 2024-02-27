@@ -169,6 +169,10 @@ createApp({
             ],
 
             activeChatIndex: 0,
+
+            // Aggiungo due stringhe per memorizzare i dati del contatto
+            activeContactName: '',
+            activeContactAvatar: '',
             
             // Creo una stringa vuota che servirà per memodizzare la ricerca
             searchQuery: "",
@@ -195,6 +199,12 @@ createApp({
                 contact.open = i ===index;
             });
             this.activeChatIndex = index;
+
+            // Modifico i dati del contatto in maniera tale
+            // fa visualizzare quelli della chat aperta
+            this.activeContactName = this.contacts[index].name;
+            this.activeContactAvatar = this.contacts[index].avatar;
+            // dopodichè aggiorno l'html
         },
         // Creo una funzione che faccia vedere in pagina un testo scritto
         // nell'input text-sender alla pressione del tasto enter

@@ -13,13 +13,13 @@
 </head>
 <body>
     <div id="app" class="container">
-        <div id="background-top" class="test"></div>
+        <div id="background-top" ></div>
     
     
         <div id="ui-container">
             <div id="user-interface" class="test">
 
-                <aside class="test">
+                <aside >
 
                     <div id="aside-top">
 
@@ -60,7 +60,7 @@
                         <div class="contact-list">
 
                             <div v-for="(contact, index) in filteredContacts" 
-                            class="contact-chat test"
+                            class="contact-chat "
                             :class="index == activeChatIndex ? 'open' : ''"
                             @click="swapActiveChat(index)"
                             >
@@ -80,12 +80,12 @@
 
                 </aside>
 
-                <main class="test">
+                <main >
                     <div class="contact">
                         <div class="contact-profile">
-                            <img src="./img/avatar_1.jpg" alt="">
+                            <img :src="activeContactAvatar" alt="">
                             <div class="contact-info">
-                                <div class="contact-name">Blur</div>
+                                <div class="contact-name">{{ activeContactName }}</div>
                                 <div class="contact-status">Ultimo accesso oggi alle: </div>
                             </div>
                         </div>
@@ -141,7 +141,7 @@
         </div>
     
     
-        <div id="background-bottom" class="test"></div>
+        <div id="background-bottom" ></div>
     </div>
 
 
