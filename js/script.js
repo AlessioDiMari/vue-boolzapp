@@ -193,8 +193,27 @@ createApp({
             // all'inizio e alla fine del valore
             const messageText = messageInput.value.trim();
 
+            // Creo un if per verificare che l'input non sia vuoto
+            if (messageText !== '') {
+                // Dichiaro la data e l'orario di invio
+                const now = new Date();
+                const formattedDate = `${now.getHours()}:${now.getMinutes()}`;
+
+                // Aggiungo il nuovo messaggio all'array dei messaggi
+                // collegati al contatto
+                this.contacts[this.activeChatIndex].messages.push({
+                    date: formattedDate,
+                    message: messageText,
+                    status: 'sent'
+                });
+
+                // faccio in modo che dopo l'invio del messaggio
+                // l'utente non debba eliminare il messaggio
+                // inviato dall'input manualmente
+                messageInput.value = '';
+            }
             
-        }
+        }      
         
     }
 }).mount("#app")
